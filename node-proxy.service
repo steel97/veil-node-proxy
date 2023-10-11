@@ -1,0 +1,14 @@
+[Unit]
+Description=Node proxy service
+
+[Service]
+User=node
+KillMode=process
+WorkingDirectory=/home/proxy/
+ExecStart=/home/proxy/veil-node-proxy
+Restart=always
+TimeoutSec=300
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

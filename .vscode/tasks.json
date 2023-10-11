@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "publish release linux-x86_64 (self-contained)",
+            "command": "dotnet",
+            "type": "process",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "args": [
+                "publish",
+                "./veil-node-proxy.csproj",
+                "-c",
+                "Release",
+                "-o",
+                "./output/linux-x86_64.self-contained.release",
+                "--self-contained",
+                "-r",
+                "linux-x64",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
